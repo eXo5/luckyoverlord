@@ -38,16 +38,15 @@
 				type: DataTypes.STRING	
 			},
 			calories: {
-				type: DataTypes.INTEGER
+				type: DataTypes.DECIMAL
 			},
 			fat: {
-				type: DataTypes.INTEGER
-			},
+				type: DataTypes.DECIMAL
 			protein:{
-				type: DataTypes.INTEGER
+				type: DataTypes.DECIMAL
 			},
 			carbs:{
-				type: DataTypes.INTEGER
+				type: DataTypes.DECIMAL
 			}
 			},{
 				classMethods: {
@@ -65,67 +64,9 @@
 
 
 
-	////TO MAKE NEW RECIPIE TABLE ----> IN THE ROUTES ON 
-	////FORM SUBMIT
-	// Recipie.create() 
-// var recipie  = require("./meals")
-
-// 	var mealTables = {	
-
-// 		mealTable: function(col1, col2){
-// 			var i=0
-// 			db.Meal.create({
-// 					??: req.body.[meal_name],
-// 					??: req.body.[ingredient]		
-// 				}
-// 				mealTables();
-// 				i++
-// 			})
-
-// 		}
-// 	}
-
-// module.exports =  mealTables
-
-//This file worked for my burger.js - I left it in for template purposes.
-// module.exports = function(sequelize, DataTypes) {
-// sequelize.authenticate().then(function(errors) { console.log("errors: " + errors) });
-//   var burgers = sequelize.define("burgers", {
-//     burger_name: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//       validate: {
-//         len: [1]
-//       }
-//     },
-//     devoured: {
-//       type: DataTypes.BOOLEAN,
-//       allowNull: false,
-//       defaultValue: false
-//     }
-//   });
-//   return burgers;
-// };
-
-
 	
-// module.exports = function(sequelize, DataTypes) {
-
-// 	var All = sequelize.define("All", {
-// 		meal_name: {
-// 			type: DataTypes.STRING
-// 		},
-
-// 		User: {
-// 			type: DataTypes.STRING
-// 		}
-// 	},{
-			
-// 			timestamps: false	
-// 		});
 
 
-// 		 return All
-// }
+
 
 
