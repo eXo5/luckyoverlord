@@ -1,10 +1,24 @@
 .navstyle {
 	background-color: #945D60;
-    border: 2px solid #3C3C3C;
+	border: 0px;
+	padding: 0;
+}
+#nav{	
+	border: none;
+	margin: 0;
+}
+#mainContent1{
+	margin: 0;
+}
+#mainContent2{
+	margin: 0;
+}
+.navbar {
+	margin-bottom: 0px;
 }
 .t-font {
-font-family: 'Josefin Sans', sans-serif;
-font-size: : 38px bold;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: : 38px bold;
 }
 #mainContent{
     font-size: 50px;
@@ -18,5 +32,30 @@ font-size: 20px;
 }
 .background {
     background-image: url(http://www.desktop-screens.com/data/out/84/3253383-pasta-wallpapers.jpg);
-    /*background-size: cover;*/
+    background-size: 100% auto;
 }
+#header-logo {
+	margin-left: 45px;
+	background-color: #626E60;
+	color: #3C3C3C;
+}
+#header-links {
+	margin-right: 45px;
+}
+.footercss {
+	background-color: #626E60;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+}
+.boxItem {
+	border: 1px solid green;
+	padding: 20px;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**   welcome.html css   //**//**//**//**//**//**//**//**//**//**//**//*
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//*
+
+
+

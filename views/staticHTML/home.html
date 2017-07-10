@@ -1,7 +1,8 @@
 <!-- TO DO: -->
-<!-- 1. change font colors in nav bar/add logo -->
-<!-- 2. take out whitespace between contents -->
-<!-- 3. footer -->
+<!-- 1. fix fonts/colors -->
+<!-- 2. footer -->
+<!-- 3. add nutrition info on 3rd content screen -->
+<!-- 4. fix classes/ids with all html pages -->
 
 
 <!DOCTYPE html>
@@ -17,12 +18,12 @@
 <body>	
 
 	<!--begin navbar-->
-	<nav class="navbar navbar-default ">
+	<nav class="navbar navbar-default" id="nav">
   <div class="container-fluid navstyle">
     <div class="navbar-header t-font">
-        <h3>Overlord</h3>
+        <h3 id="header-logo">Overlord</h3>
     </div>
-    <div style="float: right;" class="b-font ">
+    <div style="float: right;" class="b-font" id="header-links">
         <ul class="nav navbar-nav">
         <li><a class="navcolor" href="#">Home</a></li>
         <li><a class="navcolor" href="#">Link</a></li>
@@ -34,25 +35,26 @@
 </nav>
 
   <!-- begin main content/sign up  -->
-  <div class="jumbotron background">
+  <div class="jumbotron background" id="mainContent1">
   <div class="container t-font" id="mainContent" style="text-align: center;">
     <h2> Welcome to Overlord</h2>
-    <br> <br> <br> 
+    <br> <br> 
     <p> Track Your Nutrition, Learn New Recipes, Live Simpler</p>
-    <br> <br> <br>
+    <br> 
     <!-- Indicates a successful or positive action -->
   <button type="button" class="btn btn-success btn-lg">Sign Up</button>
+  <br> <br> 
   </div>
 </div>
 
 <!-- begin features -->
-<div class="jumbotron">
+<div class="jumbotron" id="mainContent2">
   <div class="container">
     <div style="text-align: center;"">
      <h2 class="t-font"> Features</h2>
       <p class="b-font"> Maintaining a healthy diet requires the right information, tools, and support. </p>
       <p> We aim to provide a holisitic approach for the smart-dieter. </p>
-   </div
+   </div>
    <br>
     <div class="b-font">
     <div class="row">
