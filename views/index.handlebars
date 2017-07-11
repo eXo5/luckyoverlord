@@ -5,7 +5,10 @@
 	<div class="col-md-6">
 		<h3 class="burgers">Burgers To Devour</h3>
 			<div id="readyEat">
-			{{things}}
+			{{words}}
+			{{words1}}
+			{{words2}}
+			{{words3}}
 			{{!-- 	{{#each burgers}}
 					{{#unless devoured}}
 					<form action="burger/eat/{{id}}?_method=PUT" method="post">
@@ -29,11 +32,10 @@
 		<div class="col-md-6">
 			<h3 class="devoured_burgers">Devoured Burgers</h3>
 				<div id="devoured">				
-				{{!-- 	{{#each burgers}}
-						{{#if devoured}}
-							<li class="form-control">{{id}}. {{burger_name}}</li>
-						{{/if}}
-					{{/each}} --}}
+				<form class="input-group meal" action="/db" method="get">
+				<input type="text" id= "mealName" name="mealName"></input>
+				<label for="mealName">Meal Name</label><br>
+				<button type="submit">Get Nutrinfo</button>
 				</div>
 			</div>
 		</center>					
@@ -43,12 +45,22 @@
 
 <div class="row">
 	<center>
-	<form class="input-group burger" action="create" method="post">
+	<form class="input-group meal" action="/db" method="post">
 		<input type="text" name="mealName"></input>
-			<button type="submit">Create A Creation</button>
+		<label for="mealName">Meal Name</label><br>
+		<input type="text" name="ingredient1"></input>
+		<label for="ingredient1">Ingredient# 1</label><br>
+		<input type="text" name="ingredient2"></input>
+		<label for="ingredient1">Ingredient# 2</label><br>
+		<input type="text" name="ingredient3"></input>
+		<label for="ingredient1">Ingredient# 3</label><br>
+			<button type="submit">create a meal</button>
 	</form>	
 	</center>
 </div>	
 
 
 </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+            <script src="assets/js/index.js"></script>    

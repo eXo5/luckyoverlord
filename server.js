@@ -17,14 +17,14 @@ var exphbs = require("express-handlebars");
 
 var PORT = process.env.PORT || 3000;
 
-//var db = require("./models");
+var db = require("./models");
 require("./routes/api-routes.js")(app);
 //require("./routes/html-routes.js")(app);
 
 
-//
-//db.sequelize.sync().then(function() {
+//Sync database, then start server.
+db.sequelize.sync().then(function() {
 	app.listen(PORT, function(){
 		console.log("Welcome to Machine " + PORT);
 	});
-//});
+});
