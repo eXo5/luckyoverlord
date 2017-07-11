@@ -1,6 +1,6 @@
 
-
-	module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
+  sequelize.authenticate().then(function(errs){ if (errs){console.log("errors: " + errs)} });
 
 		var Meal = sequelize.define("Meal", {
 			meal_name: {
@@ -42,6 +42,7 @@
 			},
 			fat: {
 				type: DataTypes.DECIMAL
+			},
 			protein:{
 				type: DataTypes.DECIMAL
 			},
@@ -65,7 +66,6 @@
 
 
 	
-
 
 
 

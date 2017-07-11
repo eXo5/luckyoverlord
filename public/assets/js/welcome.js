@@ -3,7 +3,7 @@
     $(document).ready(function(){
       $('.carousel').carousel();//Makes the carousel spin
       $('#newLordModal').modal({
-      	//dismissible: let exit on click outside the modal
+      	//dismissible: let exit modal on click outside the modal
       	complete: function(data){ //after modal is complete - send the post to the server
       		alert("it worked");
       		$.post("api/newLord", function(data){
