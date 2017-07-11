@@ -42,6 +42,7 @@
 			},
 			fat: {
 				type: DataTypes.DECIMAL
+			},
 			protein:{
 				type: DataTypes.DECIMAL
 			},
@@ -50,9 +51,9 @@
 			}
 			},{
 				classMethods: {
-			        associate: function(models) {
-					Meal.belongsTo(models.User, {
-	           			 onDelete: "cascade"
+			      associate: function(models) {
+							Meal.belongsTo(models.User, {
+	           	onDelete: "cascade"
 	          });
 	        }
 				},
