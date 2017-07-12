@@ -1,7 +1,7 @@
 .navstyle {
     background-color: #945D60 ;
     border: 0px;
-  border-bottom: 2px solid #FFF;
+    border-bottom: 2px solid #FFF;
     padding: 0;
 }
 #nav{    
@@ -10,12 +10,20 @@
 }
 #navSignIn {
   position: relative;
+  margin-top: 20px;
+}
+ul {
+  list-style-type: none;
 }
 #mainContent1{
     margin: 0;
 }
 #mainContent2{
     margin: 0;
+    background-color: #626E60;
+}
+#mainContent3{
+  margin: 0;
 }
 .navbar {
     margin-bottom: 0px;
@@ -72,6 +80,20 @@ footer {
     bottom: 0;
 }
 
+#img-margin {
+  margin-left: 60px;
+}
+#img-margin1 {
+  margin-left: 60px;
+}#img-margin2 {
+  margin-left: 60px;
+}#img-margin3 {
+  margin-left: 60px;
+}#img-margin4 {
+  margin-left: 60px;
+}#img-margin5 {
+  margin-left: 60px;
+}
 
 
 .boxItem {

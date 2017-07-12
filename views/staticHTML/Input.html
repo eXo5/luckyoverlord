@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Overlord</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+  <title> Overlord</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato+Kaushan+Script" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="jquery.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>    
     <!--begin navbar-->
@@ -28,7 +31,7 @@
             <div class="col-md-12">
               <p class="t-font">Settings</p>
               <ul class="home-settings b-font">
-                <li> <a href="#">Home</li></a>
+                <li> <a href="Welcome.html">Home</li></a>
                 <li> <a href="#">Link</li></a>
                 <li> <a href="#">Sign Out</li></a>
               </ul>
@@ -37,9 +40,32 @@
         <!-- recipe buttons -->
               <div class="row"> 
                 <div class="col-md-12 b-font">
-                <a href="#" class="btn btn-default btn-lg active" role="button">Search Foods</a>
+<!--                 <a href="#" class="btn btn-default btn-lg active" role="button">Search Foods</a>
+ -->
+              <button type="button" class="btn btn-success" id="navSignUp" data-toggle="modal" data-target="#myModal5">Search Foods </button>
+                                <!-- Begin Modal -->
+                                    <!-- Modal -->
+                              <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                      <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;"> Search Foods</h4>
+                                    </div>
+                                    <div class="modal-body b-font">
+                                        <form>
+                                        <div class="form-group" style="text-align: left;">
+                                                    <label for="name">Search : </label>
+                                                    <input type="search" class="form-control" id="Sitename">
+                                                  </div>
+                                          <button type="submit" class="btn btn-default">Search</button>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                 <br><br>
-                <a href="#" class="btn btn-primary btn-lg active" role="button">Create New Recipe</a>
+                 <button type="button" class="btn btn-danger">Sign Out</button>
                 </div>
               </div>
         </div>
@@ -92,8 +118,37 @@
                         <!-- ingredient button prompts modal -->
                           <div class="row"> 
                             <div class="col-md-12">
-                            <!-- button adds ingredients to recipe table list -->
-                            <button type="button" class="btn btn-success">Add Ingredient</button>
+                            <!-- button/modal adds ingredients to recipe table list -->
+                              <button type="button" class="btn btn-success" id="navSignUp" data-toggle="modal" data-target="#myModal4">
+                                    Add Ingredient
+                                  </button>
+                                  <!-- Modal -->
+                                      <!-- Modal -->
+                                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;"> Add Ingredient to Recipe</h4>
+                                      </div>
+                                      <div class="modal-body b-font">
+                                          <form>
+                                          <div class="form-group" style="text-align: left;">
+                                                      <label for="name">Ingredient : </label>
+                                                      <input type="search" class="form-control" id="Sitename">
+                                                    </div>
+                                            <button type="submit" class="btn btn-default">Search</button>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                           <!--  <button type="button" class="btn btn-success" i>Add Ingredient</button> -->
+
+
+
                             <br><br>
                             <!-- button makes api call -->
                             <button type="button" class="btn btn-danger">Make Recipe</button>
