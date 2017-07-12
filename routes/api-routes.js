@@ -1,4 +1,3 @@
-
 var path = require("path");
 var db = require("../models");
 
@@ -11,6 +10,33 @@ module.exports = function(app) {
         res.sendFile(path.resolve("public", "welcome.html"));
         //path.resolve defines that root as absolute for sendFile
     });
+    //app.post "/" adds new users
+    app.post("/", function(req, res) {
+        db.User.create({
+            username: req.body.username, ////(or what ever the form input is called)
+            password: req.body.password,
+            name: req.body.name ////(or what ever the form input is called)
+        }).then(function(data) {
+            res.redirect("/")
+        });
+    });
+
+    //app.get USER PAGE
+    app.get("/userpage/:user", function(req, res) {
+        db.User.findOne({
+            where: {
+                username: req.params.user
+            }
+        }).then(function(data) {
+            var hbsObject = {
+                users: data
+            }
+            console.log(hbsObject)
+            res.render("userpage", hbsObject)
+        });
+    });
+
+
 
     app.get("/db", function(req, res) {
         db.Meal.findAll() //query the db for everything in Meal
@@ -19,9 +45,9 @@ module.exports = function(app) {
                 var clean = JSON.parse(JSON.stringify(result))
                 console.log(clean);
 
-                res.render("index", {meal_name: result});
+                res.render("index", { meal_name: result });
             })
-    });//end get /db
+    }); //end get /db
 
     app.get("/:userName/:meal_name", function() {
 
@@ -39,8 +65,8 @@ module.exports = function(app) {
         console.log("Meal Name: " + mealName + "\n" + "Meal Route: " + mealRoute);
 
         db.Meal.create({ meal_name: mealName, ingredient1: ingred1, ingredient2: ingred2, ingredient3: ingred3 })
-         .then(function(result) {
-            console.log(result);
+            .then(function(result) {
+                console.log(result);
                 res.redirect("/db");
             });
     });

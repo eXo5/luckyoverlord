@@ -1,0 +1,165 @@
+<nav class="navbar navbar-default" id="nav">
+  <div class="container-fluid navstyle">
+    <div class="navbar-header t-font">
+        <h3 id="header-logo">Overlord</h3>
+    </div>
+    <div style="float: right;" class="b-font" id="header-links">
+        <ul class="nav navbar-nav">
+        <li><a class="navcolor" href="#">Home</a></li>
+        <li><a class="navcolor" href="#">Link</a></li>
+        <li><a class="navcolor" href="#">Link</a></li>
+      </ul>
+      <button type="button" class="btn btn-success navbar-btn">Login</button>
+    </div>
+  </div>
+</nav>
+  <!-- begin main content/sign up  -->
+  <div class="jumbotron background" id="mainContent1">
+  <div class="container t-font" id="mainContent" style="text-align: center;">
+    <h2> Welcome to Overlord</h2>
+    <br> <br> 
+    <p> Track Your Nutrition, Learn New Recipes, Live Simpler</p>
+    <br> 
+    <!-- Indicates a successful or positive action -->
+  <button type="button" class="btn btn-success btn-lg" id="signup">Sign Up</button>
+  <br> <br> 
+  </div>
+</div>
+<!-- begin features -->
+<div class="jumbotron" id="mainContent2">
+  <div class="container">
+    <div style="text-align: center;"">
+     <h2 class="t-font"> Features</h2>
+      <p class="b-font"> Maintaining a healthy diet requires the right information, tools, and support. </p>
+      <p> We aim to provide a holisitic approach for the smart-dieter. </p>
+   </div>
+   <br>
+    <div class="b-font">
+    <div class="row">
+      <div class="col-md-3"></div>
+          <div class="col-md-2">
+            <p>Feature #1</p>
+          </div>
+          <div class="col-md-2">
+            <p>Feature #2</p>
+          </div>
+          <div class="col-md-2">
+            <p>Feature #3</p>
+          </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+          <div class="col-md-2">
+            <p>Feature #4</p>
+          </div>
+          <div class="col-md-2">
+            <p>Feature #5</p>
+          </div>
+          <div class="col-md-2">
+            <p>Feature #6</p>
+          </div>
+      <div class="col-md-3"></div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- begin recipes/nutrition info  -->
+  <div class="jumbotron">
+  <div class="container">
+    <h2 class="t-font" style="text-align: center;"">Custom Recipes, Detailed Nutritions </h2>
+    <div class="row">
+      <div class="col-md-2"></div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-4 b-font">
+            <ul>
+              {{#each meal}}
+                <li>{{meal.id}}{{meal.meal_name}}</li>>
+              {{/each}} 
+              {{!--   <li>Recipe 1</li>
+                <li>Recipe 2</li>
+                <li>Recipe 3</li>
+                <li>Recipe 4</li>
+                <li>Recipe 5</li>
+                <li>Recipe 6</li>
+                <li>Recipe 7</li>
+                <li>Recipe 8</li>
+                <li>Recipe 9</li>
+                <li>Recipe 10</li> --}}
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <p class="t-font">Nutrition Info</p>
+          </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+<!-- Footer begin -->
+  <footer>
+  <div class="container footercss">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline footer-menu">
+            <li><a href="https://github.com/eXo5/luckyoverlord">Developer site</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block text-center">
+          <p class="copyright">
+            Copyright 2016 Overlord. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline pull-right social-icon">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</footer>
+<div class="newUser">
+    <center>
+    <a class="waves-effect waves-light btn" href="#newLordModal">Get Started!</a>
+      <div id="newLordModal" class="modal modal-fixed-footer">
+      <form method="post" action="/">
+        <div class="modal-content">
+          <h4>New Lord</h4>
+            <p>Please Enter Credentials Below</p>
+            
+              <div class="row">
+                <div class="input-field col s6">
+               <div class="input-field col s6">
+               
+               {{!-- added a name field --}}
+                  <input placeholder="Name" id="name" type="text" class="active validate" name="name" required>
+                  <label for="password">Name</label>
+                </div>  
+                  <input placeholder="New Lord" name="username" id="username" type="text" class="active validate" required>
+                  <label for="name">Username</label>
+                </div>
+                <div class="input-field col s6">
+                  <input placeholder="Password" id="password" type="password" class="active validate" name="password" required>
+                  <label for="password">Password</label>
+                
+                </div> 
+              </div>
+              <div class="modal-footer">
+              {{!-- submit button --}}
+                  <button class="btn btn-default" type="submit">Over Lord</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </center> 

@@ -24,10 +24,14 @@
     "jquery": "^3.2.1",
     "method-override": "^2.3.9",
     "mysql2": "^1.3.5",
+<<<<<<< HEAD
     "node-uuid": "^1.4.8",
     "nutritionix": "^0.6.1",
     "passport": "^0.3.2",
     "request": "^2.81.0",
+=======
+    "passport": "^0.3.2",
+>>>>>>> 8b335efcfbe8bc6515a89586e0591a709adc1662
     "sequelize": "^4.3.0"
   }
 }

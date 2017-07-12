@@ -51,9 +51,9 @@ module.exports = function(sequelize, DataTypes) {
 			}
 			},{
 				classMethods: {
-			        associate: function(models) {
-					Meal.belongsTo(models.User, {
-	           			 onDelete: "cascade"
+			      associate: function(models) {
+							Meal.belongsTo(models.User, {
+	           	onDelete: "cascade"
 	          });
 	        }
 				},
