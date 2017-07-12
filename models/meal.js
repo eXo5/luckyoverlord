@@ -1,6 +1,6 @@
 
-
-	module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
+  sequelize.authenticate().then(function(errs){ if (errs){console.log("errors: " + errs)} });
 
 		var Meal = sequelize.define("Meal", {
 			meal_name: {
@@ -48,25 +48,32 @@
 			},
 			carbs:{
 				type: DataTypes.DECIMAL
-			}
-			},{
-				classMethods: {
-			      associate: function(models) {
-							Meal.belongsTo(models.User, {
-	           	onDelete: "cascade"
-	          });
-	        }
-				},
-				timestamps: false
-			
-		});
+			},
+    created_at: {
+      type: DataTypes.DATE
+    }
+   },{ 
+			// 	classMethods: {
+			//       associate: function(models) {
+			// 				Meal.belongsTo(models.User, {
+	  //          	onDelete: "cascade"
+	  //         });
+	  //       }
+			// 	},
+			 	timestamps: false
+			 })
+
+			Meal.associate = function (models) {
+    Meal.belongsTo(models.User, {
+      onDelete: "cascade"
+   })
+		};
 		return Meal
 	};
 
 
 
 	
-
 
 
 

@@ -1,0 +1,26 @@
+<div class="container">
+<div class="row">
+<form name="form" class="form-inline">
+  <div class="form-group col s3 push-s4">
+    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+  </div>
+  <div class="form-group col s3 push-s4">
+    <label class="sr-only" for="exampleInputPassword3">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+  </div>
+  <div class="form-group form-inline col s2 push-s4">
+  <button style="margin-top:'5px', clear:both" type="submit" class="btn btn-default">Sign in</button>
+	</div>
+</form>
+</div>
+</div>
+<script>
+
+$("form").on("submit", function(){
+					$.post( "ajax/test.html", function( data ) {
+ 				 $( ".result" ).html( data );
+						});
+}); 
+
+</script>

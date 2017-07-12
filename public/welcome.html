@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>LuckyOverlord</title>
+    <link rel="icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+     <style>
+     body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+  footer {
+    width:100%;
+        background-color: salmon;
+  }
+      </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="nav-wrapper">
+                    <a class="luckyLord" href="#">Lucky Overlord</a>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="row right">
+                <form name="form" class="form-inline">
+                    <div class="form-group col s3 push-s4">
+                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                    </div>
+                    <div class="form-group col s3 push-s4">
+                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                    </div>
+                    <div class="form-group form-inline col s2 push-s4">
+                        <button style="clear:both" type="submit" class="btn btn-default">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <center style="clear:both">
+                <h1>Lucky Overlord</h1>
+            </center>
+            <div class="row">
+
+            <!-- Carousel -->
+            <div class="carousel">
+                <a class="carousel-item" href="#one!"><img src="https://i.ytimg.com/vi/XGFzne__Fw8/maxresdefault.jpg"></a>
+                <a class="carousel-item" href="#two!"><img src="http://knowledgeoverflow.com/wp-content/uploads/2013/03/food_photography_burger_by_masterdev777-d3h1ryk.jpg"></a>
+                <a class="carousel-item" href="#three!"><img src="http://brightcove.vo.llnwd.net/d21/unsecured/media/1033249144001/1033249144001_2245552258001_video-still-for-video-2026567658001.jpg?pubId=1033249144001"></a>
+                <a class="carousel-item" href="#four!"><img src="http://clv.h-cdn.co/assets/16/31/640x320/landscape-1470239458-vegeterian-dinners.jpg"></a>
+                <a class="carousel-item" href="#five!"><img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/9/15/0/Healthy_Hearty-Soup-013_s4x3.jpg.rend.hgtvcom.336.252.jpeg"></a>
+            </div>
+          <div class="newUser">
+            <center>
+            <a class="waves-effect waves-light btn" href="#newLordModal">Get Started!</a>
+              <div id="newLordModal" class="modal modal-fixed-footer">
+              <form method="post" action="/newLord">
+                <div class="modal-content">
+                  <h4>New Lord</h4>
+                    <p>Please Enter Credentials Below</p>
+                    
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="New Lord" name="username" id="name" type="text" class="active validate" required>
+                          <label for="name">Username</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input placeholder="Password" id="password" type="password" class="active validate" name="password" required>
+                          <label for="password">Password</label>
+                        </div>  
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Over Lord</a>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </center>
+          </div>  
+            <br>
+              <center>
+             <form name="form1" class="form-inline" method="POST" action="food">
+                    <div class="form-group col s3 push-s4">
+                        <label class="ingredient" for="ingredient">Ingredient</label>
+                        <input type="text" class="form-control" name= "ingredient" id="ingredient" placeholder="ingredient">
+                    </div>
+                    <div class="form-group form-inline col s2 push-s4">
+                        <button id="searchNutrix" style="clear:both" type="submit" class="btn btn-default">Recipe Info</button>
+                    </div>
+                </form>
+                </center>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerStuff z-depth-5">
+            <h1>Footer</h1>
+        </div>
+    </footer>
+    <!-- jQuery, then materialize, then local script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+            <script src="assets/js/welcome.js"></script>    
+</body>
+</html>
