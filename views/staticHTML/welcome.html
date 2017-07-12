@@ -6,6 +6,8 @@
 	 <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato+Kaushan+Script" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="jquery.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -30,9 +32,67 @@
         <div class="col-md-2 settings">
           <p class="t-font">Settings</p>
             <ul class="home-settings b-font">
-              <li> <a href="#">Recipe Book</li></a>
-              <li> <a href="#">Update Info</li></a>
-              <li> <a href="#">Sign Out</li></a>
+
+              <li> <a href="Input.html">Recipe Book</li></a>
+
+
+              <!-- <li> <a href="#">Update Info</li></a> -->
+        <button type="button" class="btn btn-success btn-lg" id="navSignUp" data-toggle="modal" data-target="#myModal3">
+              Update Info
+            </button>
+            <!-- Modal -->
+                <!-- Modal -->
+          <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;">Update Your Information</h4>
+                </div>
+                <div class="modal-body b-font">
+                    <form>
+                    <div class="form-group" style="text-align: left;">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" id="name">
+                              </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="email" >Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd" >Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Height (centimeters): </label>
+                        <input type="number" class="form-control" name="quantity" id="height">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Weight (pounds): </label>
+                        <input type="number" class="form-control" name="quantity" id="weight">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Birthday: </label>
+                        <input type="date" name="bday">
+                      </div>  
+                      <br>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Profile Picture: </label>
+                        <input type="file" name="img">
+                        <br>
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+                <br><br>
+              <button type="button" class="btn btn-danger">Sign Out</button>
             </ul>
         </div>
         <!-- main content -->
