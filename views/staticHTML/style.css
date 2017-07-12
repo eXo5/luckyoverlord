@@ -46,9 +46,9 @@ ul {
   font-size: 70px;
 }
 #purpose{
-  color:#FFF;
+  color:#3C3C3C;
   font-weight:bolder;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .b-font {
 font-family: 'Lato', sans-serif;
