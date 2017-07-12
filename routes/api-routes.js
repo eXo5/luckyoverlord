@@ -5,11 +5,16 @@ module.exports = function(app) {
     var request = require('request');
     var hbsObject;
 
-    //get request "/" sends welcome.html
-    app.get("/", function(req, res) {
-        res.sendFile(path.resolve("public", "welcome.html"));
-        //path.resolve defines that root as absolute for sendFile
+    //get request "/" renders home
+     app.get("/", function(req, res){
+        db.Meal.findAll({}).then(function(data){
+            var hbsObject = {
+                meal: data
+            };
+            res.render("home", hbsObject) 	
     });
+	});        
+ 
     //app.post "/" adds new users
     app.post("/", function(req, res) {
         db.User.create({
@@ -26,13 +31,20 @@ module.exports = function(app) {
         db.User.findOne({
             where: {
                 username: req.params.user
+            },
+            include: {
+            	model: db.Meal
             }
         }).then(function(data) {
             var hbsObject = {
-                users: data
+                users: data,
+                meals: data
+              
             }
+  var dat = JSON.parse(JSON.stringify(data));
+                console.log(dat);
             console.log(hbsObject)
-            res.render("userpage", hbsObject)
+            res.render("userpage", hbsObject);
         });
     });
 

@@ -11,7 +11,7 @@ var app = express();
 	app.use(bodyParser.json({ type:"application./vnd.api+json"}));
 
 var exphbs = require("express-handlebars");
-	app.use(express.static(process.cwd() + "/public"));
+	app.use(express.static("public"));
 	app.engine("handlebars", exphbs({defaultLayout: "main"}));
 	app.set("view engine", "handlebars");	
 
@@ -26,7 +26,7 @@ require("./routes/api-routes.js")(app);
 
 
 //Sync database, then start server.
-db.sequelize.sync().then(function() {
+db.sequelize.sync({}).then(function() {
 	app.listen(PORT, function(){
 		console.log("Welcome to Machine " + PORT);
 	});

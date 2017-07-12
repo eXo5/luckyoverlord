@@ -48,18 +48,26 @@ module.exports = function(sequelize, DataTypes) {
 			},
 			carbs:{
 				type: DataTypes.DECIMAL
-			}
-			},{
-				classMethods: {
-			      associate: function(models) {
-							Meal.belongsTo(models.User, {
-	           	onDelete: "cascade"
-	          });
-	        }
-				},
-				timestamps: false
-			
-		});
+			},
+    created_at: {
+      type: DataTypes.DATE
+    }
+   },{ 
+			// 	classMethods: {
+			//       associate: function(models) {
+			// 				Meal.belongsTo(models.User, {
+	  //          	onDelete: "cascade"
+	  //         });
+	  //       }
+			// 	},
+			 	timestamps: false
+			 })
+
+			Meal.associate = function (models) {
+    Meal.belongsTo(models.User, {
+      onDelete: "cascade"
+   })
+		};
 		return Meal
 	};
 

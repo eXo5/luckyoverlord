@@ -10,6 +10,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    name: {
+      type: DataTypes.STRING
+    },
     sex:{
       type: DataTypes.ENUM("male", "female")
     },
@@ -35,19 +38,26 @@ module.exports = function(sequelize, DataTypes) {
     created_at: {
       type: DataTypes.DATE
     }
-    }, {
+   },{ 
 
-      classMethods: {
-            associate: function(models) {
-          User.hasMany(models.Meal, {
-            onDelete: "cascade"
-          });
-        }
+      // classMethods: {
+      //       associate: function(models) {
+      //     User.hasMany(models.Meal, {
+      //       onDelete: "cascade"
+      //     });
+      //   }
       
-    },
-    timestamps: false,  
-  });
-  
+    //},
+      timestamps: false,  
+    
+ //});
+ })
+  // Class Method
+User.associate = function (models) {
+    User.hasMany(models.Meal, {
+      onDelete: "cascade"
+    })
+};
 
   return User; 
 }
