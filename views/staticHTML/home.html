@@ -13,7 +13,8 @@
 	 <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato+Kaushan+Script" rel="stylesheet">
-	
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="jquery.js"></script>
 </head>
 <body>	
 
@@ -25,11 +26,36 @@
     </div>
     <div style="float: right;" class="b-font" id="header-links">
         <ul class="nav navbar-nav">
-        <li><a class="navcolor" href="#">Home</a></li>
-        <li><a class="navcolor" href="#">Link</a></li>
-        <li><a class="navcolor" href="#">Link</a></li>
+        <li><a class="navcolor" href="#" style="color:#FFF">Home</a></li>
+        <li><a class="navcolor" href="#" style="color:#FFF">Link</a></li>
+        <li><a class="navcolor" href="#" style="color:#FFF">Link</a></li>
       </ul>
-      <button type="button" class="btn btn-success navbar-btn">Login</button>
+
+      <!-- login modal -->
+<!-- MODAL START -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      Sign In
+    </button>
+    <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                  <p>hello world.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      <!-- <button type="button" class="btn btn-success navbar-btn">Login</button> -->
     </div>
   </div>
 </nav>
@@ -37,15 +63,17 @@
   <!-- begin main content/sign up  -->
   <div class="jumbotron background" id="mainContent1">
   <div class="container t-font" id="mainContent" style="text-align: center;">
-    <h2> Welcome to Overlord</h2>
+    <h2 id="welcomeuser"> Welcome to Overlord</h2>
     <br> <br> 
-    <p> Track Your Nutrition, Learn New Recipes, Live Simpler</p>
+    <p id="purpose"> Track Your Nutrition, Learn New Recipes, Live Simpler</p>
     <br> 
     <!-- Indicates a successful or positive action -->
   <button type="button" class="btn btn-success btn-lg">Sign Up</button>
   <br> <br> 
   </div>
 </div>
+
+
 
 <!-- begin features -->
 <div class="jumbotron" id="mainContent2">
