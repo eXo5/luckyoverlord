@@ -1,5 +1,4 @@
 
-
 module.exports = function(sequelize, DataTypes) {
   sequelize.authenticate().then(function(errs){ if (errs){console.log("errors: " + errs)} });
   var User  = sequelize.define("User", {

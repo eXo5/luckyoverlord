@@ -3,7 +3,6 @@
 
     //Initialize the carousel on pageload
     $(document).ready(function() {
-        $('.carousel').carousel(); //Makes the carousel spin
         $('#newLordModal').modal({
             //dismissible: let exit modal on click outside the modal
             complete: function(data) { //after modal is complete - send the post to the server
@@ -38,7 +37,7 @@
           dataType : "html" //this specification allows the response to be parsed allowing the nested information to be declared into usable forms.
         }).done(function(response){
           var parseResponse = JSON.parse(response);
-           console.log("");
+           console.log(parseResponse);
           console.log(parseResponse.hits[0].fields);
           console.log("Name: " + parseResponse.hits[0].fields.item_name);
           console.log("Calories: " + parseResponse.hits[0].fields.nf_calories);
@@ -48,15 +47,18 @@
           console.log("Sugars: " + parseResponse.hits[0].fields.nf_sugars);
           console.log("Total Carbohydrates: " + parseResponse.hits[0].fields.nf_total_carbohydrate);     
           console.log("Sodium: " + parseResponse.hits[0].fields.nf_sodium);
-          
-         // console.log(response);
-        }) 
-         //    console.log("nf_calories: " + body)
-         //    var parseBody = JSON.parse(body);
-         //    res.send(parseBody.hits[0].fields);
+          }); 
 
+        });
 
-         //  });
-        })
-
+        $("#newMeal").on("submit", function(){
+          var meal_name = $("#mealName").val();
+          var ingredient1 = $("#ingredient1").val();
+          var ingredient2 = $("#ingredient2").val();
+          var ingredient3 = $("#ingredient3").val();
+          console.log(meal_name);
+          console.log(ingredient1);
+          console.log(ingredient2);
+          console.log(ingredient3);
+          });
     }); //end ready
